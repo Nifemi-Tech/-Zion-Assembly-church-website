@@ -9,8 +9,8 @@
   Change these placeholders before testing the role gate.
 */
 window.ZION_CONFIG = {
-  demoAdminPasscode: "ZionAdmin-704de12a",
-  demoMemberPasscode: "ZionMember-c064a4ef",
+  demoAdminPasscode: "OhmyGodwow",
+  demoMemberPasscode: "Hebrews 13:8",
   churchEmail: "zionassembly@example.com",
   storageKey: "zion_assembly_portal_v1"
 };
