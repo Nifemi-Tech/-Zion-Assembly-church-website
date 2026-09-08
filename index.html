@@ -3,66 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zion Assembly Church</title>
+  <meta name="description" content="Zion Assembly Church member portal">
+  <title>Welcome | Zion Assembly</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="logo" href="#home">Zion Assembly</a>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-      <nav id="nav-links">
-        <a href="#home">Home</a>
-        <a href="#sermons">Sermons</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body class="gate-body">
+  <div class="gate-bg"></div>
+  <main class="gate-shell">
+    <div class="gate-card">
+      <img class="gate-logo" src="assets/logo.png" alt="Church logo">
+      <p class="eyebrow">The Redeemed Christian Church of God</p>
+      <h1 id="gate-title">Welcome to Zion Assembly</h1>
+      <p id="gate-subtitle" class="lead">A place to worship, learn, connect and grow together.</p>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <p class="eyebrow">Welcome to Zion Assembly</p>
-        <h1>Growing in faith.<br><span>Living in purpose.</span></h1>
-        <p class="hero-text">A place to worship, learn, connect, and grow together in Christ.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#sermons">Explore Sermons</a>
-          <a class="btn secondary" href="#about">Learn More</a>
+      <section id="role-step" class="gate-step">
+        <h2>How would you like to enter?</h2>
+        <div class="role-grid">
+          <button class="role-card" data-role="admin">
+            <span class="role-icon">👑</span>
+            <strong>Admin</strong>
+            <small>Manage the church portal</small>
+          </button>
+          <button class="role-card" data-role="member">
+            <span class="role-icon">👤</span>
+            <strong>Member</strong>
+            <small>Access sermons and church updates</small>
+          </button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="quick-links container">
-      <a href="#sermons"><strong>📖</strong><span>Latest Sermons<small>Read and download messages</small></span></a>
-      <a href="#about"><strong>⛪</strong><span>Who We Are<small>Discover our church family</small></span></a>
-      <a href="#contact"><strong>✉️</strong><span>Get in Touch<small>We would love to hear from you</small></span></a>
-    </section>
+      <section id="passcode-step" class="gate-step hidden">
+        <button id="back-btn" class="back-btn">← Back</button>
+        <div id="role-badge" class="role-badge"></div>
+        <h2 id="passcode-title">Enter passcode</h2>
+        <p id="passcode-help">Enter your passcode to continue.</p>
+        <form id="passcode-form">
+          <label for="passcode">Passcode</label>
+          <div class="password-wrap">
+            <input id="passcode" type="password" autocomplete="off" required placeholder="Enter passcode">
+            <button type="button" id="toggle-pass" aria-label="Show passcode">Show</button>
+          </div>
+          <p id="error-message" class="error-message"></p>
+          <button class="btn primary full" type="submit">Continue →</button>
+        </form>
+      </section>
 
-    <section id="sermons" class="section container">
-      <div class="section-heading">
-        <div><p class="eyebrow">Message Library</p><h2>Latest Sermons</h2></div>
-        <p>Download messages and revisit the Word anytime.</p>
-      </div>
-      <div id="sermon-list" class="sermon-grid"></div>
-    </section>
-
-    <section id="about" class="about section">
-      <div class="container about-grid">
-        <div><p class="eyebrow">Our Church</p><h2>Faith, fellowship, and a growing family.</h2></div>
-        <p>Zion Assembly is a community committed to worship, sound teaching, prayer, and practical Christian living. Everyone is welcome to join us as we grow together.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section container contact-card">
-      <p class="eyebrow">Stay Connected</p>
-      <h2>Have a question or prayer request?</h2>
-      <p>Reach out to the church team through your preferred contact channel.</p>
-      <a class="btn primary" href="mailto:zionassembly@example.com">Contact Us</a>
-    </section>
+      <p class="gate-note">Zion Assembly Church Portal</p>
+    </div>
   </main>
-
-  <footer><div class="container"><p>© <span id="year"></span> Zion Assembly Church. All rights reserved.</p></div></footer>
-  <script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="gate.js"></script>
 </body>
 </html>

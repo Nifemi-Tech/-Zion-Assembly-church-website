@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Zion Assembly</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+<a class="brand" href="admin.html"><img src="assets/logo.png" alt="Church logo"><span>Zion Assembly Admin</span></a>
+<button class="menu-toggle">☰</button>
+<nav id="nav-links"><a href="#dashboard">Dashboard</a><a href="#sermons-admin">Sermons</a><a href="#events-admin">Events</a><a href="#announcements-admin">Announcements</a><button id="logout" class="nav-button">Exit</button></nav>
+</div></header>
+
+<main>
+<section id="dashboard" class="admin-banner"><div class="container"><p class="eyebrow">Admin Dashboard</p><h1>Manage your church portal.</h1><p>Add and edit the information shown to members on this browser.</p></div></section>
+<section class="section container">
+<div class="stats admin-stats"><div><strong id="a-sermons">0</strong><span>Sermons</span></div><div><strong id="a-events">0</strong><span>Events</span></div><div><strong id="a-announcements">0</strong><span>Announcements</span></div></div>
+
+<div id="sermons-admin" class="admin-panel"><div class="panel-heading"><div><p class="eyebrow">Message Library</p><h2>Manage Sermons</h2></div></div>
+<form id="sermon-form" class="admin-form">
+<input type="hidden" name="id"><input required name="title" placeholder="Sermon title"><input name="speaker" placeholder="Speaker">
+<input required name="date" type="date"><input name="description" placeholder="Short description"><input name="file" placeholder="File path e.g. sermons/my-sermon.pdf">
+<div class="form-actions"><button class="btn primary" type="submit">Save Sermon</button><button id="sermon-cancel" class="btn ghost" type="button">Clear</button></div>
+</form><div id="admin-sermon-list" class="admin-list"></div></div>
+
+<div id="events-admin" class="admin-panel"><div class="panel-heading"><div><p class="eyebrow">Calendar</p><h2>Manage Events</h2></div></div>
+<form id="event-form" class="admin-form"><input type="hidden" name="id"><input required name="title" placeholder="Event title"><input required name="date" type="date"><input name="time" placeholder="Time"><input name="location" placeholder="Location"><input name="description" placeholder="Description"><div class="form-actions"><button class="btn primary" type="submit">Save Event</button><button id="event-cancel" class="btn ghost" type="button">Clear</button></div></form>
+<div id="admin-event-list" class="admin-list"></div></div>
+
+<div id="announcements-admin" class="admin-panel"><div class="panel-heading"><div><p class="eyebrow">Updates</p><h2>Manage Announcements</h2></div></div>
+<form id="announcement-form" class="admin-form"><input type="hidden" name="id"><input required name="title" placeholder="Announcement title"><input required name="date" type="date"><textarea name="body" rows="3" placeholder="Announcement details"></textarea><div class="form-actions"><button class="btn primary" type="submit">Save Announcement</button><button id="announcement-cancel" class="btn ghost" type="button">Clear</button></div></form>
+<div id="admin-announcement-list" class="admin-list"></div></div>
+
+<div class="security-note"><strong>Important:</strong> This GitHub Pages version stores content in the current browser only. It is a front-end prototype, not a secure multi-device admin system. For real private admin authentication and shared uploads, connect the site to a backend such as Supabase or Firebase.</div>
+</section>
+</main>
+<footer><div class="container"><p>© <span id="year"></span> Zion Assembly Church.</p></div></footer>
+<script src="config.js"></script><script src="admin.js"></script>
+</body></html>
