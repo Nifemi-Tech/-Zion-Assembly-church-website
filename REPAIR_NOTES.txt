@@ -1,0 +1,13 @@
+ZION ASSEMBLY FIRE UPGRADE - UI REPAIR
+
+The original ZIP had two full CSS design systems stacked into one style.css. That is why the interface could collapse into broken-looking lines and conflicting layouts.
+
+This repaired package replaces style.css with ONE clean, coherent stylesheet. The existing HTML/JS pages and RCCG logo are preserved.
+
+Important: the ZIP you uploaded does not contain index.html, config.js, or gate.js. Those were intentionally absent from the supplied package, so this repair does not invent or overwrite your existing login/access flow. Keep those files from your current GitHub repository.
+
+To update GitHub:
+1. Open your repository.
+2. Upload/replace style.css with the repaired style.css from this ZIP.
+3. Upload the other matching HTML/JS files only if you want the full portal pages from this upgrade.
+4. Keep your existing index.html, config.js and gate.js.
