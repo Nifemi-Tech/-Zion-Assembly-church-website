@@ -1,69 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Member Portal | Zion Assembly</title><link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header"><div class="container nav">
-<a class="brand" href="member.html"><img src="assets/logo.png" alt="Church logo"><span>Zion Assembly</span></a>
-<button class="menu-toggle" aria-label="Open menu">☰</button>
-<nav id="nav-links"><a href="#home">Home</a><a href="#sermons">Sermons</a><a href="#events">Events</a><a href="#about">About</a><a href="#prayer">Prayer</a><button id="logout" class="nav-button">Exit</button></nav>
+<meta name="description" content="Zion Assembly member portal"><title>Member Dashboard | Zion Assembly</title>
+<link rel="stylesheet" href="style.css">
+</head><body class="portal-body">
+<header class="topbar"><div class="container topbar-inner">
+<a class="brand" href="member.html"><img src="assets/logo.png" alt="RCCG logo"><span><b>ZION</b> ASSEMBLY</span></a>
+<div class="top-actions"><span class="live-pill"><i></i> Member Area</span><button id="logout" class="logout-btn">Exit</button></div>
 </div></header>
-
-<main>
-<section id="home" class="portal-hero"><div class="container hero-content">
-<p class="eyebrow">Member Portal</p><h1>Welcome to<br><span>Zion Assembly.</span></h1>
-<p class="hero-text">Stay connected to the Word, church announcements, events and your church family.</p>
-<a class="btn primary" href="#sermons">Browse Sermons</a>
-</div></section>
-
-<section class="stats container">
-<div><strong id="sermon-count">0</strong><span>Sermons</span></div>
-<div><strong id="event-count">0</strong><span>Upcoming Events</span></div>
-<div><strong>24/7</strong><span>Access</span></div>
+<div class="app-shell container">
+<aside class="sidebar"><div class="side-label">PORTAL</div><nav class="side-nav">
+<a class="active" href="member.html"><span>⌂</span> Dashboard</a><a href="sermons.html"><span>♫</span> Sermons</a><a href="events.html"><span>◷</span> Events</a><a href="prayer.html"><span>♡</span> Prayer Request</a><a href="about.html"><span>✦</span> About Zion</a>
+</nav><div class="side-quote"><small>WORD FOR THE JOURNEY</small><p>“Commit your works to the Lord, and your plans will be established.”</p><strong>Proverbs 16:3</strong></div></aside>
+<main class="dashboard-main">
+<section class="welcome-panel"><div><p class="eyebrow">Zion Assembly • Member Portal</p><h1>Welcome home.</h1><p>Stay connected to sermons, church updates, events and prayer.</p></div><div class="welcome-mark"><img src="assets/logo.png" alt="RCCG logo"><span>RCCG</span></div></section>
+<section class="dash-grid">
+<a class="feature-card featured" href="sermons.html"><span class="card-icon">♫</span><div><small>MESSAGE LIBRARY</small><h2>Explore Sermons</h2><p>Listen, read and download messages from the church.</p></div><b>→</b></a>
+<a class="feature-card" href="events.html"><span class="card-icon">◷</span><div><small>CHURCH CALENDAR</small><h2>Upcoming Events</h2><p>See what's happening next at Zion Assembly.</p></div><b>→</b></a>
+<a class="feature-card" href="prayer.html"><span class="card-icon">♡</span><div><small>PRAYER</small><h2>Send a Request</h2><p>Prepare a prayer request for the church.</p></div><b>→</b></a>
 </section>
-
-<section id="sermons" class="section container">
-<div class="section-heading"><div><p class="eyebrow">Message Library</p><h2>Sermons</h2></div><p>Find a message and download it when the file is available.</p></div>
-<div class="search-row"><input id="sermon-search" type="search" placeholder="Search sermons, speakers or topics..."></div>
-<div id="sermon-list" class="sermon-grid"></div>
-</section>
-
-<section id="events" class="section soft-section"><div class="container">
-<div class="section-heading"><div><p class="eyebrow">Church Calendar</p><h2>Upcoming Events</h2></div></div>
-<div id="event-list" class="event-grid"></div>
-</div></section>
-
-<section id="announcements" class="section container">
-<div class="section-heading"><div><p class="eyebrow">Stay Updated</p><h2>Announcements</h2></div></div>
-<div id="announcement-list" class="announcement-list"></div>
-</section>
-
-<section class="verse-section"><div class="container verse-card">
-<p class="eyebrow">Verse of the Week</p><blockquote id="verse-text"></blockquote><cite id="verse-ref"></cite>
-</div></section>
-
-<section id="about" class="about section"><div class="container about-grid">
-<div><p class="eyebrow">Our Church</p><h2>Faith, fellowship, and a growing family.</h2></div>
-<div><p>Zion Assembly is a community committed to worship, sound teaching, prayer and practical Christian living.</p>
-<div class="placeholder-box"><strong>Service Times</strong><p>[Add Sunday service time]</p><p>[Add weekday service time]</p></div></div>
-</div></section>
-
-<section id="prayer" class="section container"><div class="form-card">
-<p class="eyebrow">Prayer</p><h2>Share a Prayer Request</h2><p class="muted">Use the form below to prepare a prayer request. Replace the placeholder email in <code>config.js</code> with the church email.</p>
-<form id="prayer-form" class="simple-form">
-<input required name="name" placeholder="Your name"><textarea required name="request" rows="5" placeholder="Your prayer request"></textarea>
-<button class="btn primary" type="submit">Prepare Prayer Request</button>
-</form>
-<p id="prayer-result" class="success-message"></p>
-</div></section>
-
-<section id="contact" class="section contact-section"><div class="container">
-<p class="eyebrow">Get in Touch</p><h2>We would love to hear from you.</h2>
-<div class="contact-grid"><div><strong>Email</strong><p>[Add church email]</p></div><div><strong>Phone</strong><p>[Add church phone]</p></div><div><strong>Address</strong><p>[Add church address]</p></div></div>
-</div></section>
-</main>
-<footer><div class="container"><p>© <span id="year"></span> Zion Assembly Church.</p></div></footer>
+<section class="dashboard-row"><div class="dash-panel"><div class="panel-top"><div><p class="eyebrow">Latest</p><h2>Church Announcements</h2></div><a href="about.html">About Zion →</a></div><div id="announcement-list" class="announcement-list compact"></div></div>
+<div class="dash-panel mini-panel"><p class="eyebrow">Quick access</p><h2>Your portal</h2><div class="quick-stat"><span>Messages</span><strong id="sermon-count">0</strong></div><div class="quick-stat"><span>Events</span><strong id="event-count">0</strong></div><a class="gold-link" href="sermons.html">Open message library →</a></div></section>
+</main></div>
+<footer><div class="container"><p>© <span id="year"></span> Zion Assembly Church • Powered by faith & fellowship.</p></div></footer>
 <script src="config.js"></script><script src="portal.js"></script>
 </body></html>
